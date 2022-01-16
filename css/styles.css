@@ -1,3 +1,5 @@
+/* google fonts integration */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 * {
   margin: 0;
@@ -18,9 +20,6 @@ nav {
 }
 .main-logo-text {
   width: 50vw;
-}
-.main-logo-text i {
-  display: none;
 }
 .main-logo-text h1 a {
   text-decoration: none;
@@ -57,7 +56,7 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-.left-side {
+.main-title {
   width: 50vw;
   height: 100%;
   display: flex;
@@ -66,11 +65,7 @@ header {
   padding-left: 8%;
   padding-right: 6%;
 }
-.left-side h1 {
-  font-size: 3.5em;
-  font-weight: bold;
-}
-.left-side a {
+.main-title a {
   text-decoration: none;
   color: white;
   background-color: #e22e6d;
@@ -79,18 +74,18 @@ header {
   border-radius: 30px;
   transition: transform 1s;
 }
-.left-side a:hover {
+.main-title a:hover {
   cursor: pointer;
   background-color: #ff0059;
   transform: scale(1.1);
 }
-.right-side {
+.main-camera {
   height: 100%;
   width: 50vw;
   display: flex;
   align-items: center;
 }
-.right-side img {
+.main-camera img {
   width: 30%;
   background-image: url("images/Circle design.svg");
   background-position: 0 0px;
@@ -99,7 +94,7 @@ header {
   margin-left: 20%;
   transition: transform 1.2s;
 }
-.right-side img:hover {
+.main-camera img:hover {
   transform: scale(1.3);
 }
 .company-logos {
@@ -121,7 +116,7 @@ header {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.products {
+.shop {
   width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -129,7 +124,7 @@ header {
   flex-direction: column;
   align-items: center;
 }
-.products-title {
+.shop-items {
   text-align: center;
   margin: 5vh 0;
 }
@@ -138,7 +133,7 @@ header {
   grid-template-columns: repeat(3, 1fr);
   width: 60vw;
 }
-.product {
+.item {
   margin-right: 30px;
   margin-bottom: 30px;
   max-height: 480px;
@@ -149,43 +144,37 @@ header {
   border-radius: 15px;
   transition: transform 1s;
 }
-.product h1 {
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.product .cost {
-  font-size: 24px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.product .rating {
-  color: orange;
-}
-.rating span {
-  color: black;
-}
-.product .detail {
-  margin-top: 5px;
-}
-
-.product img {
+.item img {
   max-width: 300px;
   height: 256px;
 }
-.product:hover {
+.item h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.item .stars {
+  color: orange;
+}
+.stars span {
+  color: black;
+}
+.item .bottom-text {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.item:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
-.products a {
+.shop a {
   text-decoration: none;
-  font-weight: bold;
   color: #e02c6d;
   font-size: 1.2em;
   margin-left: 50%;
   transition: transform 1s;
 }
-.products a:hover {
+.shop a:hover {
+  font-size: bold;
   color: #ff0059;
   transform: translateX(20px);
 }
@@ -196,6 +185,11 @@ header {
   margin-top: 100px;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.creative-image {
+  width: 15%;
+  display: flex;
   align-items: center;
 }
 .creative-text {
@@ -218,11 +212,6 @@ header {
 .creative-text p {
   color: rgb(192, 192, 192);
 }
-.creative-image {
-  width: 15%;
-  display: flex;
-  align-items: center;
-}
 .creative-text a {
   font-size: 20px;
   color: white;
@@ -244,18 +233,24 @@ footer {
   margin-bottom: 0;
   padding: 40px;
 }
+footer h2 {
+  font-weight: 900;
+}
 footer p {
   margin-top: 10px;
 }
-footer .links a {
+.bottom-nav a {
   color: white;
   text-decoration: none;
   margin-left: 1vw;
   font-size: 20px;
 }
-.links a:hover {
+.bottom-nav a:hover {
   color: #ff0059;
 }
+
+/* responsive */
+
 @media only screen and (max-width: 688px) {
   nav {
     margin-top: 5vh;
@@ -286,21 +281,21 @@ footer .links a {
     margin-top: 5vh;
     margin-bottom: 5vh;
   }
-  .right-side {
+  .main-camera {
     width: 100vw;
     margin-bottom: 5vh;
   }
-  .right-side img {
+  .main-camera img {
     margin: auto;
   }
-  .left-side {
+  .main-title {
     width: 100vw;
     text-align: center;
   }
-  .left-side h1 {
+  .main-title h1 {
     font-size: 2em;
   }
-  .left-side a {
+  .main-title a {
     margin: auto;
   }
   .logos {
@@ -311,17 +306,17 @@ footer .links a {
     grid-row-gap: 20px;
     place-items: center;
   }
-  .products {
+  .shop {
     margin: 10px 0;
   }
-  .products a {
+  .shop a {
     margin: auto;
   }
   .collection {
     grid-template-columns: repeat(1, 1fr);
     width: 100vw;
   }
-  .product {
+  .item {
     margin: 10px auto;
   }
   .creative {
@@ -356,6 +351,9 @@ footer .links a {
     font-size: 1em;
   }
 }
+
+/* responsive */
+
 @media only screen and (max-width: 968px) and (min-width: 688px) {
   nav {
     margin-top: 5vh;
@@ -386,22 +384,22 @@ footer .links a {
     margin-top: 5vh;
     margin-bottom: 5vh;
   }
-  .right-side {
+  .main-camera {
     width: 100vw;
     margin-bottom: 5vh;
   }
-  .right-side img {
+  .main-camera img {
     background-size: 220px;
     margin: auto;
   }
-  .left-side {
+  .main-title {
     width: 100vw;
     text-align: center;
   }
-  .left-side h1 {
+  .main-title h1 {
     font-size: 2em;
   }
-  .left-side a {
+  .main-title a {
     margin: auto;
   }
   .logos {
@@ -412,17 +410,17 @@ footer .links a {
     grid-row-gap: 30px;
     place-items: center;
   }
-  .products {
+  .shop {
     margin: 10px 0;
   }
-  .products a {
+  .shop a {
     margin: 3vh auto;
   }
   .collection {
     grid-template-columns: repeat(2, 1fr);
     width: 100vw;
   }
-  .product {
+  .item {
     margin: 10px auto;
   }
   .creative {
@@ -456,6 +454,9 @@ footer .links a {
     font-size: 1em;
   }
 }
+
+/* responsive */
+
 @media only screen and (max-width: 1440px) and (min-width: 968px) {
   nav .main-logo-text h1 a {
     font-size: 1.3em;
@@ -466,20 +467,20 @@ footer .links a {
   .top-nav ul li a {
     font-size: 1.2em;
   }
-  .left-side h1 {
+  .main-title h1 {
     font-size: 3em;
   }
-  .products {
+  .shop {
     margin: 10px 0;
   }
-  .products a {
+  .shop a {
     margin: 3vh auto;
   }
   .collection {
     grid-template-columns: repeat(3, 1fr);
     width: 100vw;
   }
-  .product {
+  .item {
     margin: 10px auto;
   }
   .creative-text h1 {
